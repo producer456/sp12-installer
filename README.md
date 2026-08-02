@@ -63,6 +63,13 @@ sudo dd if=sp12-installer.img of=/dev/sdX bs=4M status=progress conv=fsync
 
 ## Known hazards, stated up front
 
+- **☠ NEVER add a battery entry to the surface-aggregator registry on this hardware.**
+  It conflicts with the ADSP battery path and can **overcharge and physically brick the
+  device** — the maintainer of the community repo reports losing two machines this way
+  ([issue #3](https://github.com/harrisonvanderbyl/surface-pro-12-inch-linux/issues/3)).
+  This image does **not** do that: battery comes from `qcom_battmgr` over pmic_glink
+  (the ADSP path), there is no aggregator battery node in the device tree, and no
+  `surface_battery`/`surface_charger` module is used. Stay on the ADSP path.
 - **Suspend hard-hangs this hardware on resume.** A sensor power domain poisons the
   resume path — see [issue #6](https://github.com/harrisonvanderbyl/surface-pro-12-inch-linux/issues/6).
   `postinstall.sh` therefore leaves idle auto-suspend **off**. Recovery from a hang is

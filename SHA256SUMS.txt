@@ -1,0 +1,3 @@
+182d09484ed068078fd0829abd3da3d814f249f405428378722852ecb4dd302b  sp12-installer.img.zst.part0
+dc9bbc938ca5cbfa06c4c0d90fc56bc7451395b27d4c4724fde52523a3559b88  sp12-installer.img.zst.part1
+ee6e0087c345565c3e5ad0eae0300f7adf57768d94beba5b868abcdaf1fac80c  sp12-installer.img.zst.part2
