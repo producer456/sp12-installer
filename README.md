@@ -1,7 +1,19 @@
-# SP12 Linux installer image (Surface Pro 12in, 1st Ed — `qcom,x1p42100`)
+# Linux installer image for the Surface Pro 12-inch (`x1p42100` / "SP12IN")
 
 A dd-able USB image that installs **Ubuntu 26.04 arm64** on a Microsoft Surface Pro
-12-inch (1st Edition) and then brings the hardware up in one command.
+12-inch and then brings the hardware up in one command.
+
+> ## ⚠ Two different machines get called "SP12" — check which one you have
+>
+> | | |
+> |---|---|
+> | **This image is for** | **Surface Pro 12-inch**, released around the Surface Pro 11, Snapdragon **X Plus `x1p42100`**. Upstream calls it **SP12IN**. |
+> | **This image is NOT for** | the **Surface Pro 12** released in 2026, Snapdragon **X2**. No device tree exists for it yet — this will not help you. |
+>
+> Check before flashing: `cat /proc/device-tree/compatible` should mention
+> `x1p42100`, or confirm the machine reports a Snapdragon X Plus.
+> (Naming clarified by @harrisonvanderbyl — earlier versions of this page used the
+> bare "SP12", which is ambiguous.)
 
 > ## ⚠ This image has never been booted on hardware other than the machine that built it — and it cannot be tested there
 >
